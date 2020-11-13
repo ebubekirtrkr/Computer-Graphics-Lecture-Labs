@@ -1,13 +1,7 @@
 var gl;
 var numPoints = 5000;
-/* Creating Canvas Element. The reason I created the object here because
-I use VSCode as code editor and if I am not do so it can't autocomplete.
-*/
+const canvas = document.querySelector("#glcanvas");
 
-var canvas = document.createElement('canvas')
-canvas.setAttribute("width", '512px');
-canvas.setAttribute("height", '512px');
-document.querySelector('#canvas_div').appendChild(canvas);
 window.onload = function main() {
 
 
@@ -18,8 +12,7 @@ window.onload = function main() {
         alert("Unable to initialize WebGL. Your browser or machine may not supportit.");
         return;
     }
-    //initShaders different from original, to use glsl I change it so that it can get from glsl files
-    var program = initShaders(gl);
+    var program = initShaders(gl, "vertex-shader", "fragment-shader");
     gl.useProgram(program);
 
     //generating points for Sierpinksi Gasket
