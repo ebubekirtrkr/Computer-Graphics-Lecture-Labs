@@ -1,5 +1,6 @@
 It is a repo that contains lab session codes from Computer Graphics Lecture
 
+[Demo Page](https://computer-graphics-lab.netlify.app)
 
 <table>
   <tr>
