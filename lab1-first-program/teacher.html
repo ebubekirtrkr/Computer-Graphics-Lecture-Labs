@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1</title>
+</head>
+
+<body>
+
+    <body>
+        <canvas id="glcanvas" width="512" height="512"></canvas>
+    </body>
+    <script id="vertex-shader" type="x-shader/xvertex">
+        attribute vec4 vPosition;
+        void main(){
+        gl_Position = vPosition;
+        }
+       </script>
+    <script id="fragment-shader" type="x-shader/xfragment">
+        precision mediump float;
+        void main() {
+        gl_FragColor = vec4( 1.0, 0.0, 0.0, 1.0 );
+        }
+       </script>
+    <script src="teacher.js"></script>
+
+</body>
+
+</html>
