@@ -13,6 +13,7 @@ window.onload = function main() {
         return;
     }
     var program = initShaders(gl, "vertex-shader", "fragment-shader");
+    //initShaders( gl, vertexShaderId, fragmentShaderId )
     gl.useProgram(program);
 
     //generating points for Sierpinksi Gasket
@@ -24,9 +25,9 @@ window.onload = function main() {
     var v = scale(0.5, add(vertices[0], vertices[2]));
     var p = scale(0.5, add(u, v));
     points = [p];
-    for (var i = 1; i < numPoints; ++i) {
-        var j = Math.floor(Math.random() * 3);
-        p = scale(0.5, add(points[i - 1], vertices[j]));
+    for (var i = 1; i < numPoints; ++i) {//numPoints is the global value
+        var j = Math.floor(Math.random() * 3);//choose a corner randomly
+        p = scale(0.5, add(points[i - 1], vertices[j]));//add and scale randomly choosen corner and previous point
         points.push(p);
         //points is a flexible so we have to flatten it(typed it)
     }
