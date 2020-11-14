@@ -45,17 +45,23 @@ window.onload = function main() {
     */
 
     gl.clearColor(1.0, 1.0, 1.0, 1.0);
-    setInterval(render, 1000 / 20);
+    setInterval(render, 1000 / 1000);
 
 };
 
 function render() {
     gl.clear(gl.COLOR_BUFFER_BIT);
-    theta += 0.1;
+    theta += (Math.PI/180);
     gl.uniform1f(thetaLoc, theta);
-    gl.drawArrays(gl.TRIANGLE_FAN, 0, 4);
+    gl.drawArrays(gl.LINE_LOOP, 0, 4);
     /*
-    TRIANGLE_FAN
+    primitives
+    POINTS
+    LINE_STRIP
     LINE_LOOP
+    LINES
+    TRIANGLE_STRIP
+    TRIANGLE_FAN
+    TRIANGLES
     */
 }
