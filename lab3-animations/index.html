@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab3</title>
+</head>
+
+<body>
+    <h1>Heyyo</h1>
+
+    <canvas id="glcanvas" width="512" height="512">
+        Oops ... your browser doesn't support the HTML5 canvas element
+    </canvas>
+    <hr>
+    <!--
+        We can then rotate this square’s corners with an angle θ by applying the rotation matrix
+        |(x)| |(cos𝜃) (−sin𝜃)|
+        |(y)| |(sin𝜃)  (cos𝜃)|
+        =|(cos𝜃)*x-(sin𝜃)*y| -> new x
+         |(sin𝜃)*x+(cos𝜃)*y| -> new y
+    -->
+    <script id="vertex-shader" type="x-shader/xvertex">
+        attribute vec4 vPosition;
+        uniform float theta;
+        void main() {
+            gl_Position.x = cos(theta) * vPosition.x - sin(theta) * vPosition.y;
+            gl_Position.y = sin(theta) * vPosition.x + cos(theta) * vPosition.y;
+            gl_Position.z = 0.0;
+            gl_Position.w = 1.0;
+        }
+       </script>
+    <script id="fragment-shader" type="x-shader/xfragment">
+        precision mediump float;
+        void main() {
+            gl_FragColor = vec4( 0.0, 0.0, 1.0, 1.0 );
+        }
+       </script>
+    <script src="../common/initShaders.js"></script>
+    <script src="../common/MV.js"></script>
+    <script src="../common/webgl-utils.js"></script>
+    <script src="rotation.js"></script>
+
+</body>
+
+</html>

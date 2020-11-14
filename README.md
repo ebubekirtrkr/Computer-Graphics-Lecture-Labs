@@ -21,4 +21,10 @@ It is a repo that contains lab session codes from Computer Graphics Lecture
    <td><a href="https://computer-graphics-lab.netlify.app/lab2-graphics-programming/index.html">Sierpinski</a>
    </td>
   </tr>
+  <tr>
+    <td>Lab3 - Animations
+    </td>
+    <td><a href="https://computer-graphics-lab.netlify.app/lab3-animations/index.html">Animations</a>
+    </td>
+  </tr>
 </table>
