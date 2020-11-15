@@ -1,5 +1,5 @@
-# Sierpinski Gasket
+# Animations
 
-[Demo link](https://computer-graphics-lab.netlify.app/lab2-graphics-programming/index.html)
+[Demo link](https://computer-graphics-lab.netlify.app/lab3-animations/index.html)
 
-![alt text](sierspinki_gasket_output.png "Sierpinski Gasket")
+![alt text](animations.png "Animations")

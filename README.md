@@ -27,4 +27,10 @@ It is a repo that contains lab session codes from Computer Graphics Lecture
     <td><a href="https://computer-graphics-lab.netlify.app/lab3-animations/index.html">Animations</a>
     </td>
   </tr>
+  <tr>
+    <td>Lab4 - Interactions
+    </td>
+    <td><a href="https://computer-graphics-lab.netlify.app/lab4-interaction/index.html">Interactions</a>
+    </td>
+  </tr>
 </table>

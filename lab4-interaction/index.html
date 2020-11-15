@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lab3</title>
+    <title>Lab4</title>
 </head>
 
 <body>
@@ -13,6 +13,20 @@
     <canvas id="glcanvas" width="512" height="512">
         Oops ... your browser doesn't support the HTML5 canvas element
     </canvas>
+    <button id="DirectionButton">
+        Change Rotation Direction
+    </button>
+    <select id="mymenu" size="3">
+        <option value="0">
+            Toggle Rotation Direction X
+        </option>
+        <option value="1">Spin Faster</option>
+        <option value="2">Spin Slower</option>
+    </select>
+    <div>
+        speed 0 <input id="slide" type="range" min="0" max="1000" step="10" value="100" />
+        1000
+    </div>
     <hr>
     <!--
         We can then rotate this square’s corners with an angle θ by applying the rotation matrix
@@ -31,6 +45,8 @@
             gl_Position.w = 1.0;
         }
        </script>
+
+
     <script id="fragment-shader" type="x-shader/xfragment">
         precision mediump float;
         void main() {
@@ -39,7 +55,8 @@
        </script>
     <script src="../common/initShaders.js"></script>
     <script src="../common/MV.js"></script>
-    <script src="rotation.js"></script>
+    <script src="../common/webgl-utils.js"></script>
+    <script src="interaction.js"></script>
 
 </body>
 
