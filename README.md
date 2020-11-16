@@ -33,4 +33,10 @@ It is a repo that contains lab session codes from Computer Graphics Lecture
     <td><a href="https://computer-graphics-lab.netlify.app/lab4-interaction/index.html">Interactions</a>
     </td>
   </tr>
+  <tr>
+    <td>Assignment1 1
+    </td>
+    <td><a href="https://computer-graphics-lab.netlify.app/assignment1/index.html">Assignment1 1</a>
+    </td>
+  </tr>
 </table>

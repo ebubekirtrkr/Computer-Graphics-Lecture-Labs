@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+ 
+</head>
+
+<body>
+    <table width="512" border="0" align="center" cellpadding="2" cellspacing="2">
+        <tbody>
+            <tr>
+                <td><canvas id="glcanvas" width="512" height="512">
+                        Oops ... your browser doesn't support the HTML5 canvas element
+                    </canvas></td>
+                <td>
+                    <table width="512" border="0" cellspacing="2" cellpadding="2">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div>
+                                        Rotate -180 <input style="width: 370px;" id="rotate" type="range" min="-180"
+                                            max="180" step="1" value="0" />
+                                        180
+                                    </div>
+                                    <label for="color_inp">Choose Color</label>
+                                    <input type="color" id="color_input" name="color_inp" value="#AD62C6">
+                                    <button style="margin-left: 280px;" id="reset">
+                                       Reset
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table width="512" border="0" cellspacing="2" cellpadding="2">
+                                        <tbody>
+                                            <tr>
+                                                <td align="center">
+                                                    <button id="toggleRotation">
+                                                        Start Rotation
+                                                    </button>
+                                                    <button id="changeDirection">
+                                                        Rotate Clockwise
+                                                    </button>
+                                                </td>
+
+                                                <td align="center">
+                                                    <select style="width: 160px;" name="mymenu" size="2" id="mymenu">
+                                                        <option value="0">Spin Faster</option>
+                                                        <option value="1">Spin Slower</option>
+                                                    </select></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">You can use 'W','A','S','D' to move.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="text-align: center;">You can use mouse wheel to zoom
+                                    in/out. </td>
+                            </tr>
+                            <tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+    <script id="vertex-shader" type="x-shader/xvertex">
+        attribute vec4 vPosition;
+        attribute vec4 aVertexColor;
+        uniform float theta;
+        uniform vec2 translate;
+        uniform float scale;
+        void main() {
+            gl_Position.x = (cos(theta) * vPosition.x  - sin(theta) * vPosition.y + translate.x)*scale;
+            gl_Position.y = (sin(theta) * vPosition.x + cos(theta) * vPosition.y + translate.y)*scale;
+            gl_Position.z = 0.0;
+            gl_Position.w = 1.0;
+        }
+       </script>
+
+
+    <script id="fragment-shader" type="x-shader/xfragment">
+        precision mediump float;
+        uniform vec3 mycolor;
+        void main() {
+            gl_FragColor = vec4(mycolor,1);
+        }
+       </script>
+    <script src="../common/initShaders.js"></script>
+    <script src="../common/MV.js"></script>
+    <script src="../common/webgl-utils.js"></script>
+    <script src="assignment.js"></script>
+
+</body>
+
+</html>
