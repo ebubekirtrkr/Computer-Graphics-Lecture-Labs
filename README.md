@@ -34,9 +34,9 @@ It is a repo that contains lab session codes from Computer Graphics Lecture
     </td>
   </tr>
   <tr>
-    <td>Assignment1 1
+    <td>Assignment 1
     </td>
-    <td><a href="https://computer-graphics-lab.netlify.app/assignment1/index.html">Assignment1 1</a>
+    <td><a href="https://computer-graphics-lab.netlify.app/assignment1/index.html">Assignment 1</a>
     </td>
   </tr>
 </table>
