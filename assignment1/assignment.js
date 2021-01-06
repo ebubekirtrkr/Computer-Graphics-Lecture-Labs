@@ -155,7 +155,7 @@ function render() {
 }
 function editTheta() {
 	if(toggleRotation){
-		theta += Math.PI/180;
+		theta += (Math.PI/180)*direction;
 	}
  }
 
